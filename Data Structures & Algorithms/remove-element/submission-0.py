@@ -1,0 +1,12 @@
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        rmCounter = 0
+
+        for i in range(len(nums)):
+            if nums[i] == val:
+                nums[i] = 51
+                rmCounter += 1
+        
+        nums.sort()
+        
+        return len(nums) - rmCounter
